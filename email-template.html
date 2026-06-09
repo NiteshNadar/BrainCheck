@@ -1,0 +1,373 @@
+  <!DOCTYPE html>
+  <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="supported-color-schemes" content="dark" />
+    <title>Your Braincheck Report</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville');
+      @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700');
+
+      body, table, td, a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+      img { -ms-interpolation-mode: bicubic; border: 0; }
+      body { margin: 0; padding: 0; background-color: #0A0908; }
+
+      .font-serif {
+        font-family: 'Libre Baskerville', Georgia, serif;
+      }
+      .font-sans {
+        font-family: 'Source Sans 3', Arial, sans-serif;
+      }
+
+      @media only screen and (max-width: 620px) {
+        .container { width: 100% !important; border-radius: 0px !important; border-left: none !important; border-right: none !important; }
+        .outer-pad { padding: 24px 8px 32px !important; }
+        .card-body { padding: 32px 20px !important; }
+        .display-size { font-size: 28px !important; }
+      }
+    </style>
+  </head>
+  <body class="font-sans" style="margin:0; padding:0; background-color:#0A0908;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0A0908">
+    <tr>
+      <td align="center" class="outer-pad" style="padding: 48px 16px 64px;">
+
+        <!-- Main Card Container -->
+        <table class="container" width="580" cellpadding="0" cellspacing="0" border="0" 
+              style="max-width:580px; width:100%; background-color:#13110F; border: 1px solid #2B251F; border-radius: 16px; border-top: 4px solid #D97706; border-collapse: separate; box-shadow: 0 16px 40px rgba(0,0,0,0.6);">
+          <tr>
+            <td class="card-body" style="padding: 44px 36px;">
+
+              <!-- Header / Logo -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 36px;">
+                <tr>
+                  <td align="left" valign="middle">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td valign="middle">
+                          <span class="font-sans" style="font-size: 20px; font-weight: 700; color: #FDFBF7; letter-spacing: -0.5px; line-height: 1;">
+                            Brain<span style="color: #D97706;">check</span>
+                          </span>
+                        </td>
+                        <td valign="middle" style="padding-left: 12px;">
+                          <table cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td style="border-left: 1px solid #2C261F; padding-left: 12px; line-height: 1;">
+                                <span class="font-sans" style="font-size: 11px; color: #A39E93; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;">
+                                  Mind Report
+                                </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Heading -->
+              <h1 class="display-size font-serif" style="margin: 0 0 24px 0; font-size: 34px; font-weight: 700; color: #FDFBF7; line-height: 1.25; letter-spacing: -0.5px;">
+                Here is what came up<br/>
+                <span style="color: #D97706; font-style: italic;">for you.</span>
+              </h1>
+
+              <!-- Intro text -->
+              <p class="font-sans" style="margin: 0 0 12px 0; font-size: 16px; font-weight: 600; color: #FDFBF7; line-height: 1.6;">
+                Hi {{ $('Fetch the Details').item.json.name }},
+              </p>
+              <p class="font-sans" style="margin: 0 0 40px 0; font-size: 15px; font-weight: 400; color: #CBC5BA; line-height: 1.7;">
+                Thank you for taking a few minutes to check in with yourself. Below is a look at where your mind is right now, across five different parts of your day. Take your time reading through it. Think of this as a gentle guide, not a test or a final score.
+              </p>
+
+              <!-- On Stress Section -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 36px;">
+                <tr>
+                  <td>
+                    <h2 class="font-serif" style="margin: 0 0 10px 0; font-size: 19px; font-weight: 700; color: #FDFBF7; line-height: 1.3;">
+                      On <span style="color: #D97706; font-style: italic;">Stress</span>
+                    </h2>
+                    <div style="height: 1px; background-color: rgba(217,119,6,0.2); margin-bottom: 16px;"></div>
+                    <p class="font-sans" style="margin: 0 0 20px 0; font-size: 15px; font-weight: 400; color: #FDFBF7; line-height: 1.7;">
+                      {{ $json.stress.condition }}
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1A1815; border-left: 3px solid #D97706; border-radius: 6px;">
+                      <tr>
+                        <td style="padding: 16px 20px;">
+                          <span class="font-serif" style="font-size: 12px; font-style: italic; color: #D97706; display: block; margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                            Gentle ideas to try:
+                          </span>
+                          
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.stress.solutions[0] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.stress.solutions[1] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.stress.solutions[2] }}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- On Focus Section -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 36px;">
+                <tr>
+                  <td>
+                    <h2 class="font-serif" style="margin: 0 0 10px 0; font-size: 19px; font-weight: 700; color: #FDFBF7; line-height: 1.3;">
+                      On <span style="color: #D97706; font-style: italic;">Focus</span>
+                    </h2>
+                    <div style="height: 1px; background-color: rgba(217,119,6,0.2); margin-bottom: 16px;"></div>
+                    <p class="font-sans" style="margin: 0 0 20px 0; font-size: 15px; font-weight: 400; color: #FDFBF7; line-height: 1.7;">
+                      {{ $json.focus.condition }}
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1A1815; border-left: 3px solid #D97706; border-radius: 6px;">
+                      <tr>
+                        <td style="padding: 16px 20px;">
+                          <span class="font-serif" style="font-size: 12px; font-style: italic; color: #D97706; display: block; margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                            Gentle ideas to try:
+                          </span>
+                          
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.focus.solutions[0] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.focus.solutions[1] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.focus.solutions[2] }}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- On Energy Section -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 36px;">
+                <tr>
+                  <td>
+                    <h2 class="font-serif" style="margin: 0 0 10px 0; font-size: 19px; font-weight: 700; color: #FDFBF7; line-height: 1.3;">
+                      On <span style="color: #D97706; font-style: italic;">Energy</span>
+                    </h2>
+                    <div style="height: 1px; background-color: rgba(217,119,6,0.2); margin-bottom: 16px;"></div>
+                    <p class="font-sans" style="margin: 0 0 20px 0; font-size: 15px; font-weight: 400; color: #FDFBF7; line-height: 1.7;">
+                      {{ $json.energy.condition }}
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1A1815; border-left: 3px solid #D97706; border-radius: 6px;">
+                      <tr>
+                        <td style="padding: 16px 20px;">
+                          <span class="font-serif" style="font-size: 12px; font-style: italic; color: #D97706; display: block; margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                            Gentle ideas to try:
+                          </span>
+                          
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.energy.solutions[0] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.energy.solutions[1] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.energy.solutions[2] }}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- On Emotional Balance Section -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 36px;">
+                <tr>
+                  <td>
+                    <h2 class="font-serif" style="margin: 0 0 10px 0; font-size: 19px; font-weight: 700; color: #FDFBF7; line-height: 1.3;">
+                      On <span style="color: #D97706; font-style: italic;">Emotional Balance</span>
+                    </h2>
+                    <div style="height: 1px; background-color: rgba(217,119,6,0.2); margin-bottom: 16px;"></div>
+                    <p class="font-sans" style="margin: 0 0 20px 0; font-size: 15px; font-weight: 400; color: #FDFBF7; line-height: 1.7;">
+                      {{ $json.emotional_balance.condition }}
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1A1815; border-left: 3px solid #D97706; border-radius: 6px;">
+                      <tr>
+                        <td style="padding: 16px 20px;">
+                          <span class="font-serif" style="font-size: 12px; font-style: italic; color: #D97706; display: block; margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                            Gentle ideas to try:
+                          </span>
+                          
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.emotional_balance.solutions[0] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.emotional_balance.solutions[1] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.emotional_balance.solutions[2] }}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- On Self Confidence Section -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 40px;">
+                <tr>
+                  <td>
+                    <h2 class="font-serif" style="margin: 0 0 10px 0; font-size: 19px; font-weight: 700; color: #FDFBF7; line-height: 1.3;">
+                      On <span style="color: #D97706; font-style: italic;">Self Confidence</span>
+                    </h2>
+                    <div style="height: 1px; background-color: rgba(217,119,6,0.2); margin-bottom: 16px;"></div>
+                    <p class="font-sans" style="margin: 0 0 20px 0; font-size: 15px; font-weight: 400; color: #FDFBF7; line-height: 1.7;">
+                      {{ $json.self_confidence.condition }}
+                    </p>
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1A1815; border-left: 3px solid #D97706; border-radius: 6px;">
+                      <tr>
+                        <td style="padding: 16px 20px;">
+                          <span class="font-serif" style="font-size: 12px; font-style: italic; color: #D97706; display: block; margin-bottom: 12px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;">
+                            Gentle ideas to try:
+                          </span>
+                          
+                          <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.self_confidence.solutions[0] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="padding-bottom: 10px; font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.self_confidence.solutions[1] }}
+                              </td>
+                            </tr>
+                            <tr>
+                              <td valign="top" style="padding-right: 8px; font-size: 14px; color: #D97706; line-height: 1.6; font-weight: bold;">•</td>
+                              <td style="font-size: 14px; color: #D4CEC3; line-height: 1.6; font-weight: 400;">
+                                {{ $json.self_confidence.solutions[2] }}
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Quote Divider -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 32px;">
+                <tr>
+                  <td style="height:1px; background: linear-gradient(90deg, transparent 0%, rgba(217,119,6,0.3) 30%, rgba(194,65,12,0.2) 70%, transparent 100%);"></td>
+                </tr>
+              </table>
+
+              <!-- Closing Quote Card -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #1A1815; border-radius: 8px; margin-bottom: 32px;">
+                <tr>
+                  <td style="padding: 24px 20px; text-align: center;">
+                    <p class="font-serif" style="margin: 0; font-size: 16px; font-style: italic; font-weight: 400; color: #F59E0B; line-height: 1.8;">
+                      &ldquo;{{ $json.closing_message }}&rdquo;
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Medical Disclaimer -->
+              <p class="font-sans" style="margin: 0; font-size: 12px; font-weight: 400; color: #8E8A82; text-align: center; line-height: 1.7;">
+                This check-in is just for you. It is not medical advice.<br/>
+                If things feel heavy, please reach out to someone you trust.
+              </p>
+
+            </td>
+          </tr>
+        </table>
+
+        <!-- Footer Outside Card -->
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 32px; max-width: 580px; width: 100%;">
+          <tr>
+            <td align="center" style="padding: 0 16px;">
+              <p class="font-sans" style="margin: 0 0 12px 0; font-size: 12px; font-weight: 400; color: #8E8A82; line-height: 1.6; text-align: center;">
+                We do not store your answers. Your privacy is fully respected.
+              </p>
+              <p class="font-sans" style="margin: 0; font-size: 11px; color: #8E8A82; text-align: center;">
+                <a href="https://braincheck.in/privacy" style="color: #A39E93; text-decoration: none; border-bottom: 1px solid #2C261F; padding-bottom: 1px; font-weight: 500;">
+                  Privacy Policy
+                </a>
+                &nbsp;&nbsp;·&nbsp;&nbsp;
+                <a href="https://braincheck.in/terms" style="color: #A39E93; text-decoration: none; border-bottom: 1px solid #2C261F; padding-bottom: 1px; font-weight: 500;">
+                  Terms of Use
+                </a>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+  </body>
+  </html>
