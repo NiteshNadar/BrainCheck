@@ -3,8 +3,8 @@ import { razorpay } from "../../../lib/razorpay";
 import { z } from "zod";
 
 const createOrderSchema = z.object({
-  amount: z.literal(4900, {
-    message: "Invalid amount. Must be exactly 4900 paise (₹49).",
+  amount: z.literal(100, {
+    message: "Invalid amount. Must be exactly 100 paise (₹1).",
   }),
   currency: z.literal("INR").optional().default("INR"),
   receipt: z.string().optional().default("braincheck_receipt"),

@@ -82,7 +82,7 @@ export default function DetailsPage() {
       const orderResponse = await fetch("/api/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: 4900 }), // Rs. 49 in paise
+        body: JSON.stringify({ amount: 100 }), // Rs. 1 in paise
       });
 
       if (!orderResponse.ok) {
@@ -95,7 +95,7 @@ export default function DetailsPage() {
       // 2. Open Razorpay Checkout Modal
       const options = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_your_key_id",
-        amount: 4900,
+        amount: 100,
         currency: "INR",
         name: "Braincheck",
         description: "Your Check-in Results Report",
@@ -299,7 +299,7 @@ export default function DetailsPage() {
                     className="w-full mt-4 flex items-center justify-center gap-2 py-3.5"
                   >
                     <CreditCard size={18} />
-                    Pay ₹49 and Get My Report
+                    Pay ₹1 and Get My Report
                   </GradientButton>
 
                   <span className="text-[10px] text-text-muted/75 text-center leading-normal mt-2">
