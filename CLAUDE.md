@@ -15,7 +15,7 @@ This file serves as a comprehensive developer reference for the Braincheck codeb
 
 ## 📋 Core Architectural Concept & User Flow
 
-Braincheck is a 12-question mental wellness self-assessment tool that provides insights via email (Rs. 1).
+Braincheck is a 12-question mental wellness self-assessment tool that provides insights via email (Rs. 49).
 1. **Home (`/`)**: Introduces the assessment, benefits, privacy policies, and FAQs.
 2. **Survey (`/survey`)**: 12-step interactive assessment flow (options stored entirely in client-side state).
 3. **Details (`/details`)**: Collects user's name, email, and consent, then initializes Razorpay.

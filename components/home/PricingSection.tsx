@@ -137,7 +137,7 @@ export default function PricingSection() {
               <div className="flex items-baseline justify-center gap-1.5">
                 <span className="text-text-muted text-2xl font-normal">₹</span>
                 <span className="text-text-primary text-5xl md:text-7xl font-black tracking-tighter leading-none">
-                  1
+                  49
                 </span>
     
               </div>

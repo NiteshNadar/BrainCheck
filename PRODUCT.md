@@ -8,7 +8,7 @@ product
 Individuals looking for a thoughtful, personal, and private mental wellness self-assessment to understand their mind (stress, focus, energy, emotional balance, self-confidence) in a warm, journal-like, reflective space.
 
 ## Product Purpose
-A 12-question mental wellness self-assessment tool (Braincheck) that delivers personalized wellness insights straight to their inbox for Rs. 1, with zero permanent storage of their personal information and answers.
+A 12-question mental wellness self-assessment tool (Braincheck) that delivers personalized wellness insights straight to their inbox for Rs. 49, with zero permanent storage of their personal information and answers.
 
 ## Brand Personality
 Intimate, reflective, warm, literary, comforting, and deeply personal. "Amber & Obsidian" theme.
