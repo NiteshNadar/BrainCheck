@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Braincheck - Mental Wellness Self-Assessment
+
+Braincheck is a private, reflective, and journal-like mental wellness self-assessment tool. It allows individuals to check in on their mind across 5 core pillars: Stress, Focus, Energy, Emotional Balance, and Self-Confidence.
+
+## Core Features
+
+- **12-Question Assessment**: A carefully crafted survey flow with a sleek, interactive, and keyboard-accessible UI.
+- **Privacy First**: Zero permanent storage of personal data, name, email, or answers in the application. Answers and contact details are cleared immediately after report generation.
+- **Automated Reports**: Integration with n8n webhook automation to compute scores, compile findings, and deliver reports directly to the user's email.
+- **Secure Razorpay Payments**: Standard Rs. 49 checkout with server-side signature verification and request validation (Zod) to prevent transaction tampering.
+- **Neural Dusk Theme**: A premium, reflective dark-first design featuring custom layout boundaries, responsive styling, and fluid motion (Framer Motion).
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Form Handling**: React Hook Form + Zod
+- **Animations**: Framer Motion
+- **Payments**: Razorpay Standard Checkout
+- **Security**: Content Security Policy (CSP), HSTS, Zod Schema Validations, environment variable isolation.
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Configure Environment Variables (`.env.local`):
+   ```env
+   RAZORPAY_KEY_ID=your_razorpay_key_id
+   RAZORPAY_KEY_SECRET=your_razorpay_key_secret
+   NEXT_PUBLIC_RAZORPAY_KEY_ID=your_razorpay_key_id
+   N8N_WEBHOOK_URL=your_n8n_webhook_url
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Build the application for production:
+   ```bash
+   npm run build
+   ```
