@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com; frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com; img-src 'self' data: https://raw.githubusercontent.com https://checkout.razorpay.com; connect-src 'self' https://api.razorpay.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; upgrade-insecure-requests;",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com; frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com; img-src 'self' data: https://raw.githubusercontent.com https://checkout.razorpay.com; connect-src 'self' https://api.razorpay.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; worker-src 'self' blob:; upgrade-insecure-requests;",
           },
           {
             key: "X-Frame-Options",
